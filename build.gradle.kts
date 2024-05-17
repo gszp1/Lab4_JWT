@@ -19,9 +19,11 @@ repositories {
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 	implementation("org.springframework.boot:spring-boot-starter-web")
-    compileOnly("jakarta.servlet:jakarta.servlet-api")
 	implementation("org.springframework:spring-webmvc")
+	compileOnly("org.projectlombok:lombok")
+    compileOnly("jakarta.servlet:jakarta.servlet-api")
 	runtimeOnly("org.postgresql:postgresql")
+	annotationProcessor("org.projectlombok:lombok")
 	providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
