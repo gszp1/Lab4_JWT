@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: Zadania_REST_API
+  datasource:
+    url: jdbc:postgresql://localhost:5432/my_database
+    username: postgres
+    password: postgres
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: create-drop
+server:
+  port: 8090
