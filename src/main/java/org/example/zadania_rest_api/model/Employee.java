@@ -30,10 +30,9 @@ public class Employee implements UserDetails {
     @Column(name = "last_name", nullable = false, length = 30)
     private String lastName;
 
-    @Column(nullable = false)
     private BigDecimal salary;
 
-    @Column(name = "employment_date", nullable = false)
+    @Column(name = "employment_date")
     private LocalDate employmentDate;
 
     private String email;
