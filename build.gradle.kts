@@ -31,7 +31,7 @@ dependencies {
 	runtimeOnly("org.postgresql:postgresql")
 	runtimeOnly("io.jsonwebtoken:jjwt-impl:0.11.5")
 	runtimeOnly("io.jsonwebtoken:jjwt-jackson:0.11.5")
-	
+
 	annotationProcessor("org.projectlombok:lombok")
 
 	providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
