@@ -58,7 +58,7 @@ public class JwtService {
                 .signWith(getSignInKey(), SignatureAlgorithm.HS256)
                 .compact();
     }
-    
+
     private Claims extractAllClaims(String token) {
         return Jwts
                 .parserBuilder()
