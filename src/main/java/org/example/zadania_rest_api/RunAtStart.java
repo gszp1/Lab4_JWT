@@ -36,7 +36,7 @@ public class RunAtStart {
                             .build()
             );
             departments = departmentRepository.saveAll(departments);
-
+            departments.forEach(System.out::println);
             List<Employee> employees = Arrays.asList(
                     Employee.builder()
                             .firstName("Tomasz")
@@ -79,6 +79,8 @@ public class RunAtStart {
                             .department(departments.get(1))
                             .build()
             );
+            employees = employeeRepository.saveAll(employees);
+            employees.forEach(System.out::println);
 
             departments.get(0).getEmployees().addAll(employees.subList(0, 2));
             departments.get(1).getEmployees().addAll(employees.subList(2, 4));

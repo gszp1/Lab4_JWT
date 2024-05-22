@@ -36,6 +36,7 @@ public class Department {
 
     @JsonIgnore
     @OneToMany(mappedBy = "department")
+    @Builder.Default
     private List<Employee> employees = new ArrayList<>();
 
     public Department(String name, String description, BigDecimal budget, LocalDate establishmentDate) {
