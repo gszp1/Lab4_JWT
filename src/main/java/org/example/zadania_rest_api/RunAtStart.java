@@ -45,7 +45,7 @@ public class RunAtStart {
                             .employmentDate(LocalDate.of(2024, 3, 2))
                             .salary(new BigDecimal("4500.00"))
                             .department(departments.getFirst())
-                            .password("password")
+                            .password("$2a$10$9mkExMA3ipycJRwVeqFD6eyN8la5vdMLXwEgbE70w6m.fKa.bjbAG")
                             .role(Role.ADMIN)
                             .build(),
                     Employee.builder()
@@ -55,7 +55,7 @@ public class RunAtStart {
                             .department(departments.getFirst())
                             .email("JakubKowalski@mail.com")
                             .employmentDate(LocalDate.of(2019, 12, 23))
-                            .password("password")
+                            .password("$2a$10$9mkExMA3ipycJRwVeqFD6eyN8la5vdMLXwEgbE70w6m.fKa.bjbAG")
                             .role(Role.USER)
                             .build(),
                     Employee.builder()
@@ -64,7 +64,7 @@ public class RunAtStart {
                             .salary(new BigDecimal("7000.4"))
                             .employmentDate(LocalDate.of(2000, 7, 4))
                             .email("JKowalski@mail.com")
-                            .password("password")
+                            .password("$2a$10$9mkExMA3ipycJRwVeqFD6eyN8la5vdMLXwEgbE70w6m.fKa.bjbAG")
                             .department(departments.get(1))
                             .role(Role.USER)
                             .build(),
@@ -73,10 +73,17 @@ public class RunAtStart {
                             .lastName("Nowak")
                             .salary(new BigDecimal("2132.2"))
                             .email("AndrzejNowak@gmail.com")
-                            .password("password")
+                            .password("$2a$10$9mkExMA3ipycJRwVeqFD6eyN8la5vdMLXwEgbE70w6m.fKa.bjbAG")
                             .role(Role.ADMIN)
                             .employmentDate(LocalDate.of(2012, 12, 12))
                             .department(departments.get(1))
+                            .build(),
+                    Employee.builder()
+                            .firstName("Tomasz")
+                            .lastName("Tomaszewski")
+                            .email("TT@mail.com")
+                            .password("$2a$10$9mkExMA3ipycJRwVeqFD6eyN8la5vdMLXwEgbE70w6m.fKa.bjbAG")
+                            .role(Role.GUEST)
                             .build()
             );
             employees = employeeRepository.saveAll(employees);
