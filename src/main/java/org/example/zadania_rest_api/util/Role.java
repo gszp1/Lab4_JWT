@@ -11,9 +11,16 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 @Getter
 public enum Role {
+
+    GUEST (
+      Set.of(
+              Permission.GUEST_READ
+      )
+    ),
     USER(
             Set.of(
-                    Permission.USER_READ
+                    Permission.USER_READ,
+                    Permission.GUEST_READ
             )
     ),
     ADMIN(
@@ -25,7 +32,11 @@ public enum Role {
                     Permission.USER_READ,
                     Permission.USER_UPDATE,
                     Permission.USER_DELETE,
-                    Permission.USER_CREATE
+                    Permission.USER_CREATE,
+                    Permission.GUEST_READ,
+                    Permission.GUEST_CREATE,
+                    Permission.GUEST_DELETE,
+                    Permission.GUEST_UPDATE
             )
     );
 
