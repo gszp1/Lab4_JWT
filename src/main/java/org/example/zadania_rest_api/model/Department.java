@@ -39,13 +39,6 @@ public class Department {
     @Builder.Default
     private List<Employee> employees = new ArrayList<>();
 
-    public Department(String name, String description, BigDecimal budget, LocalDate establishmentDate) {
-        this.name = name;
-        this.description = description;
-        this.budget = budget;
-        this.establishmentDate = establishmentDate;
-    }
-
     @Override
     public String toString() {
         return "Department{" +

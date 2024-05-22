@@ -45,16 +45,7 @@ public class Employee implements UserDetails {
     @ManyToOne
     @JoinColumn(name = "department_id")
     private Department department;
-
-    public Employee(String firstName, String lastName, BigDecimal salary,
-                    LocalDate employmentDate, Department department) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.salary = salary;
-        this.employmentDate = employmentDate;
-        this.department = department;
-    }
-
+    
     @Override
     public String toString() {
         return "Employee{" +
