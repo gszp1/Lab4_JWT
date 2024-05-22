@@ -2,10 +2,7 @@ package org.example.zadania_rest_api.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -17,6 +14,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
+@Builder
 @Table(name = "departments")
 public class Department {
 
@@ -38,14 +36,8 @@ public class Department {
 
     @JsonIgnore
     @OneToMany(mappedBy = "department")
+    @Builder.Default
     private List<Employee> employees = new ArrayList<>();
-
-    public Department(String name, String description, BigDecimal budget, LocalDate establishmentDate) {
-        this.name = name;
-        this.description = description;
-        this.budget = budget;
-        this.establishmentDate = establishmentDate;
-    }
 
     @Override
     public String toString() {
