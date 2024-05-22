@@ -48,7 +48,6 @@ public enum Role {
                 .map(permission -> new SimpleGrantedAuthority(permission.getPermission()))
                 .collect(Collectors.toList());
         authorities.add(new SimpleGrantedAuthority("ROLE_" + name()));
-        authorities.forEach(System.out::println);
         return authorities;
     }
 }
