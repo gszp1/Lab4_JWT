@@ -6,16 +6,15 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
 import java.util.List;
 import java.util.Set;
-import java.util.stream.Collectors;
 
 @RequiredArgsConstructor
 @Getter
 public enum Role {
 
-    GUEST (
-      Set.of(
-              Permission.GUEST_READ
-      )
+    GUEST(
+            Set.of(
+                    Permission.GUEST_READ
+            )
     ),
     USER(
             Set.of(
