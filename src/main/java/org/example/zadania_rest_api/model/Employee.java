@@ -45,7 +45,7 @@ public class Employee implements UserDetails {
     @ManyToOne
     @JoinColumn(name = "department_id")
     private Department department;
-    
+
     @Override
     public String toString() {
         return "Employee{" +
